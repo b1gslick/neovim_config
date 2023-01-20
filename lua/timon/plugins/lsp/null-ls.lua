@@ -23,6 +23,8 @@ null_ls.setup({
 			extra_args = { "--line-length=120" },
 		}),
 		formatting.isort,
+		formatting.google_java_format,
+		diagnostics.write_good,
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
 			condition = function(utils)
@@ -30,6 +32,7 @@ null_ls.setup({
 			end,
 		}),
 	},
+
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
 		if current_client.supports_method("textDocument/formatting") then

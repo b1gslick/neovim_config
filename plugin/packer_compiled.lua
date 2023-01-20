@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/s_timokhin/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/Users/s_timokhin/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/Users/s_timokhin/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -159,6 +164,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/s_timokhin/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/s_timokhin/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-jdtls"] = {
+    loaded = true,
+    path = "/Users/s_timokhin/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
+    url = "https://github.com/mfussenegger/nvim-jdtls"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

@@ -51,3 +51,6 @@ let g:vimspector_terminal_maxwidth = 70
 ]])
 
 vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]])
+
+-- timert for LSP
+vim.g.lsp_formatting_timeout = 5000

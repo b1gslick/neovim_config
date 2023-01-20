@@ -22,7 +22,6 @@ local keymap = vim.keymap -- for conciseness
 local on_attach = function(client, bufnr)
 	-- keybind options
 	local opts = { noremap = true, silent = true, buffer = bufnr }
-
 	-- set keybinds
 	keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
 	keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
@@ -42,6 +41,10 @@ local on_attach = function(client, bufnr)
 		keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>") -- rename file and update imports
 		keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>") -- organize imports (not in youtube nvim video)
 		keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
+		client.server_capabilities.documentFormattingProvider = false
+	end
+	if client.name == "sumneko_lua" then
+		client.server_capabilities.documentFormattingProvider = false
 	end
 end
 
@@ -69,7 +72,7 @@ typescript.setup({
 		on_attach = on_attach,
 	},
 })
-
+--
 -- configure css server
 lspconfig["cssls"].setup({
 	capabilities = capabilities,

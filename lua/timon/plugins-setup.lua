@@ -51,6 +51,8 @@ return packer.startup(function(use)
 
 	-- vs-code like icons
 	use("nvim-tree/nvim-web-devicons")
+	-- for java
+	use("mfussenegger/nvim-dap")
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
@@ -86,6 +88,7 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 	use("simrat39/rust-tools.nvim")
+	use("ray-x/lsp_signature.nvim")
 
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
@@ -111,6 +114,9 @@ return packer.startup(function(use)
 	use("puremourning/vimspector")
 
 	use("voldikss/vim-floaterm")
+
+	-- for java another try
+	use("mfussenegger/nvim-jdtls")
 
 	if packer_bootstrap then
 		require("packer").sync()
