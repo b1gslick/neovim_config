@@ -10,3 +10,4 @@ ctrl + b and ctr + f -scroll
 ctrl + space - complete
 Ctrl + e - abort
 enter - confirm
+ctr o - ctr i got ti file and back

@@ -115,8 +115,15 @@ return packer.startup(function(use)
 
 	use("voldikss/vim-floaterm")
 
-	-- for java another try
-	use("mfussenegger/nvim-jdtls")
+	-- config java
+	-- Syntax highlighting for Java
+	use("sheerun/vim-polyglot")
+	-- Auto-completion for Java
+	use("davidhalter/jedi-vim")
+	-- Java code formatter
+	use("artur-shaik/vim-javacomplete2")
+	-- Java linter
+	use("w0rp/ale")
 
 	if packer_bootstrap then
 		require("packer").sync()

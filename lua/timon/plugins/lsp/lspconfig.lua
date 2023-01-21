@@ -13,8 +13,38 @@ end
 -- import typescript plugin safely
 local typescript_setup, typescript = pcall(require, "typescript")
 if not typescript_setup then
+	print(typescript)
 	return
 end
+
+-- Configure the Java linter (ALE)
+local java_linter = pcall(require, "javac")
+if not java_linter then
+	return
+end
+
+-- local ale_linters = {
+-- 	java = java_linter,
+-- }
+--
+-- -- Configure the Java code formatter
+-- vim.g.javacomplete2_format = "google"
+--
+-- -- Enable ALE
+-- vim.g.ale_linters = ale_linters
+-- vim.g.ale_fix_on_save = 1
+-- vim.g.ale_lint_on_text_changed = "never"
+--
+-- -- Enable Jedi
+-- vim.g.jedi = {
+-- 	completions_enabled = 1,
+-- 	auto_initialization = 1,
+-- 	auto_vim_configuration = 1,
+-- }
+--
+-- -- Enable Java syntax highlighting
+-- -- vim.g.polyglot_disabled = { "python", "html", "javascript" }
+-- vim.g.polyglot_java_highlight_method = "java"
 
 local keymap = vim.keymap -- for conciseness
 
